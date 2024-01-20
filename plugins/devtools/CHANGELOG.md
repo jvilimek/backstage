@@ -1,5 +1,17 @@
 # @backstage/plugin-devtools
 
+## 0.1.9-next.0
+
+### Patch Changes
+
+- 995d280: Updated imports from named to default imports to help with the Material UI v4 to v5 migration
+- Updated dependencies
+  - @backstage/core-components@0.13.10
+  - @backstage/core-plugin-api@1.8.2
+  - @backstage/errors@1.2.3
+  - @backstage/plugin-devtools-common@0.1.8
+  - @backstage/plugin-permission-react@0.4.19
+
 ## 0.1.8
 
 ### Patch Changes
