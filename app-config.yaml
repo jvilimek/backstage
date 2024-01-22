@@ -32,18 +32,24 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
-  baseUrl: http://localhost:7007
-  listen:
-    port: 7007
+  baseUrl: https://fuzzy-space-yodel-97w496wq9q9c754q-7007.app.github.dev
+  listen: 0.0.0.0:7007
   database:
     client: better-sqlite3
     connection: ':memory:'
   cors:
-    origin: http://localhost:3000
+    origin: '*'
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
   csp:
-    connect-src: ["'self'", 'http:', 'https:']
+    default-src: ["*", 'unsafe-inline', 'unsafe-eval']
+    script-src: ["*", 'unsafe-inline', 'unsafe-eval']
+    connect-src: ["*", 'unsafe-inline']
+    img-src: ["*", 'data']
+    blob: ['unsafe-inline']
+    frame-src: ['*']
+    style-src: ['*', 'unsafe-inline']
+
     # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
     # Default Helmet Content-Security-Policy values can be removed by setting the key to false
   reading:
